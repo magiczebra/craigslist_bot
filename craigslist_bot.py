@@ -7,7 +7,7 @@ def craigslist_search_encoder(s):
 	return s.replace(" ", "+")
 
 
-searches = ['bmw 330ci'] #searching sfbay craigslist for sale with this search key
+searches = [''] #searching sfbay craigslist for sale with this search key
 prices = []
 titles = []
 links = []
@@ -47,5 +47,5 @@ dict = {
 }
 
 df = pd.DataFrame(dict)
-df.sort_values(by="Price").to_csv('cls_gpu_search.csv') #saves data in csv file with title of search key
+df.sort_values(by="Price").to_csv('craigslist_search.csv') #saves data in csv file with title of search key
 print(df.sort_values(by="Price"))
